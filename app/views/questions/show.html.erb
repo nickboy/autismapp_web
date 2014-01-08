@@ -1,0 +1,10 @@
+<div class="span12">
+	<div class="question">
+		<%= link_to("Edit", edit_question_path(@question), :class => "btn btn-mini btn-primary pull-right") %>
+	</div>
+
+	<h2> <%= @question.title %></h2>
+	<p> <%= @question.type %> </p>
+	<p> <%= @question.img %> </p>
+	<p> <%= @question.answer %> </p>
+</div>

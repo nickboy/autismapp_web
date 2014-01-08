@@ -1,0 +1,35 @@
+<div class="span12">
+	<h4>Reinforcements</h4>
+	<div class="reinforcement">
+		<%= link_to("New reinforcement", new_reinforcement_path, :class => "btn btn-mini btn-primary pull-right") %>
+	</div>
+
+	<table class ="table">
+		<thead>
+			<tr>
+				<td>#</td>
+				<td>title</td>
+				<td>url</td>
+				<td>description</td>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @reinforcements.each do |reinforcement| %>
+				<tr>
+					<td> #</td>
+					<td><%= link_to(reinforcement.title, reinforcement_path(reinforcement)) %></td>
+					<td><%= reinforcement.description %> </td>
+					<td><%= reinforcement.description %> </td>
+					<td> <%= link_to("Edit", edit_reinforcement_path(reinforcement), :class => "btn btn-mini") %>
+
+						<%= link_to("Delete", reinforcement_path(reinforcement), :class => "btn btn-mini", :method => :delete, :confirm => "Are you sure?")%>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+
+
