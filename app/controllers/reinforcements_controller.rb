@@ -15,7 +15,7 @@ class ReinforcementsController < ApplicationController
 		@reinforcement = Reinforcement.find(params[:id])
 		respond_to do |format|
 			format.html
-			format.json { render json: @reinforcements}
+			format.json { render json: @reinforcement}
 		end
 	end
 
