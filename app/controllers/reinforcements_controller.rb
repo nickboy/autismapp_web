@@ -1,6 +1,6 @@
 class ReinforcementsController < ApplicationController
 
-	#before_action :login_required
+	before_action :login_required
 
 	def index
 		@reinforcements = Reinforcement.all
