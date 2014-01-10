@@ -4,10 +4,19 @@ class ReinforcementsController < ApplicationController
 
 	def index
 		@reinforcements = Reinforcement.all
+
+		respond_to do |format|
+			format.html
+			format.json { render json: @reinforcements}
+		end
 	end
 
 	def show
 		@reinforcement = Reinforcement.find(params[:id])
+		respond_to do |format|
+			format.html
+			format.json { render json: @reinforcements}
+		end
 	end
 
 	def new

@@ -4,7 +4,10 @@
 	</div>
 
 	<h2> <%= @question.title %></h2>
-	<p> <%= @question.type %> </p>
+	<p> <%= @question.category %> </p>
 	<p> <%= @question.img %> </p>
 	<p> <%= @question.answer %> </p>
+	<% if @question.attachment? %>
+		<p><%= image_tag @question.attachment.url(:thumb) %></p>
+	<% end %>
 </div>

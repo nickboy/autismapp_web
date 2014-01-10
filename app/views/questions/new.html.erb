@@ -1,10 +1,10 @@
 <div class="span12">
-	<%= simple_form_for @question do |f| %>
+	<%= simple_form_for @question, :html => {:multipart => true} do |f| %>
 		<%= f.input :title, :input_html => { :class => "input-xxlarge"} %>
-		<%= f.input :type, :input_html => { :class => "input-xxlarge"} %>
+		<%= f.input :category, :input_html => { :class => "input-xxlarge"} %>
 		<%= f.input :img, :input_html => { :class => "input-xxlarge"} %>
 		<%= f.input :answer, :input_html => { :class => "input-xxlarge"} %>
-
+		<%= f.file_field :attachment %>
 		<div class = "form-actions">
 			<%= f.submit "Submit", :disable_with => "submiting...", :class => "btn btn-primary" %>
 		</div>

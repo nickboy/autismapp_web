@@ -6,7 +6,7 @@
 		<thead> 
 			<tr>
 				<td> # </td>
-				<td> Title </td>
+				<td> Type </td>
 				<td> Img </td>
 				<td> Answer </td>
 			</tr>
@@ -14,7 +14,11 @@
 		<tbody>
 			<% @questions.each do |question| %> 
 			<tr>
-				<td> # </td>
+				<td>
+					<% if question.attachment?%>
+						<%= image_tag question.attachment.url(:thumb) %>
+					<% end %>
+				</td>
 				<td> <%= link_to(question.title, question_path(question)) %> </td>
 				<td>question.img</td>
 				<td>question.answer</td>
