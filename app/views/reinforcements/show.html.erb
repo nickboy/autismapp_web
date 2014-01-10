@@ -5,6 +5,11 @@
 
 	<h2> <%= @reinforcement.title %> </h2>
 	<p> <%= @reinforcement.description %></p>
+
 	<p> <%= @reinforcement.url %></p>
-	<%= image_tag @reinforcement.attachment.url %>
+	
+	<% if @reinforcement.attachment? %>
+		<%= image_tag @reinforcement.attachment.url %>
+	<% end %>
+
 </div>

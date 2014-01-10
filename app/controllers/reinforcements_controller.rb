@@ -50,6 +50,6 @@ class ReinforcementsController < ApplicationController
 	private
 
 	def reinforcement_params
-		params.require(:reinforcement).permit(:title, :description, :url)
+		params.require(:reinforcement).permit(:title, :description, :url, :attachment)
 	end
 end

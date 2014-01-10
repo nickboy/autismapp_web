@@ -7,7 +7,7 @@
 	<table class ="table">
 		<thead>
 			<tr>
-				<td>#</td>
+				<td>picture</td>
 				<td>title</td>
 				<td>url</td>
 				<td>description</td>
@@ -17,9 +17,13 @@
 		<tbody>
 			<% @reinforcements.each do |reinforcement| %>
 				<tr>
-					<td> #</td>
+					<td> 
+					<% if reinforcement.attachment?%>
+						<%= image_tag reinforcement.attachment.url(:thumb) %>
+					<% end %>
+					</td>
 					<td><%= link_to(reinforcement.title, reinforcement_path(reinforcement)) %></td>
-					<td><%= reinforcement.description %> </td>
+					<td><%= reinforcement.url %> </td>
 					<td><%= reinforcement.description %> </td>
 					<td> <%= link_to("Edit", edit_reinforcement_path(reinforcement), :class => "btn btn-mini") %>
 

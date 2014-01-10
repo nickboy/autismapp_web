@@ -1,9 +1,12 @@
 <div class="span12">
-	<%= simple_form_for @reinforcement do |f| %>
+	<h4>Edit Reinforcement</h4>
+
+	<%= simple_form_for @reinforcement, :html => {:multipart => true } do |f| %>
+		<%= f.error_notification %>
 		<%= f.input :title, :input_html => { :class =>"input-xxlarge"} %>
 		<%= f.input :url, :input_html => { :class =>"input-xxlarge"} %>
 		<%= f.input :description, :input_html => { :class =>"input-xxlarge"} %>
-		<%= f.input :attachment %>
+		<%= f.file_field :attachment %>
 		<div class="form-actions">
 			<%= f.submit "Submit", :disable_with => 'Submiting...', :class => "btn btn-primary" %>
 		</div>
