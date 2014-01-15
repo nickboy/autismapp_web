@@ -2,7 +2,6 @@
 	<%= simple_form_for @question, :html => {:multipart => true} do |f| %>
 		<%= f.input :title, :input_html => { :class => "input-xxlarge"} %>
 		<%= f.input :category, :input_html => { :class => "input-xxlarge"} %>
-		<%= f.input :img, :input_html => { :class => "input-xxlarge"} %>
 		<%= f.input :answer, :input_html => { :class => "input-xxlarge"} %>
 		<%= f.file_field :attachment %>
 		<div class = "form-actions">

@@ -18,5 +18,5 @@
 *.swp
 .env
 public/uploads
+public/system
 vendor/bundler_gems
-config/database.yml

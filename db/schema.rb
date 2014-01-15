@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 20140110221842) do
   create_table "questions", force: true do |t|
     t.string   "title"
     t.string   "category"
-    t.string   "img"
     t.string   "answer"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -27,7 +27,7 @@ class ReinforcementsController < ApplicationController
 		@reinforcement = Reinforcement.new(reinforcement_params)
 		if @reinforcement.save
 			flash[:notice] = "Reinforcement was successfully created."
-			redirect_to reinforcements_path(@reinforcement)
+			redirect_to reinforcement_path(@reinforcement)
 		else
 			render :actoin => "new"
 		end
